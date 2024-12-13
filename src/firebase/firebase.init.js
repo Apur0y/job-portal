@@ -19,3 +19,11 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
 
 export default auth;
+
+
+// VITE_apiKey=AIzaSyDr3sqWdGEOo75-n3xtwCmbAv4rRpK0BSE
+// VITE_authDomain=job-portal-ff64e.firebaseapp.com
+// VITE_projectId=job-portal-ff64e
+// VITE_storageBucket=job-portal-ff64e.firebasestorage.app
+// VITE_messagingSenderId=1049794192451
+// VITE_appId=1:1049794192451:web:9ab1f0ce26480b3556e0f6
