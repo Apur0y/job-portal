@@ -3,9 +3,9 @@ import RegisterIcon from '../../assets/lottie/register.json'
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext';
 
-const Register = () => {
+const Login = () => {
 
-  const {createUser} = useContext(AuthContext)
+  const {signInUser} = useContext(AuthContext)
 
      const handleSubmit =(event)=>{
           event.preventDefault()
@@ -17,8 +17,8 @@ const Register = () => {
             name,email,password
         }
         
-      
-        createUser(email,password)
+        signInUser(email,password)
+
         .then(res=>{
           console.log(res)
         })
@@ -36,12 +36,7 @@ const Register = () => {
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
       <form onSubmit={handleSubmit} className="card-body">
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Name</span>
-          </label>
-          <input type="text" name='name' placeholder="Name" className="input input-bordered" required />
-        </div>
+     
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
@@ -60,7 +55,7 @@ const Register = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Register</button>
+          <button className="btn btn-primary">Login</button>
         </div>
       </form>
     </div>
@@ -69,4 +64,4 @@ const Register = () => {
     );
 };
 
-export default Register;
+export default Login;
