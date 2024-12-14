@@ -23,7 +23,7 @@ const Login = () => {
           console.log(res)
         })
         .catch((error)=>{
-          console.log("Got a error:", error.message)
+          console.log("ERROR: ", error.message)
         })
 
      } 
