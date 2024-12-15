@@ -15,7 +15,7 @@ const Home = () => {
         Form the Batch 50
       </motion.div>
       <div>
-        <TopJobs></TopJobs>
+       
       </div>
     </div>
   );
