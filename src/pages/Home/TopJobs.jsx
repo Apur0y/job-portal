@@ -4,10 +4,10 @@ import JobsCard from '../JobsCard';
 const TopJobs = () => {
     return (
         <div>
-            <div className='text-3xl font-semibold'>
+            <div className='text-3xl text-center font-semibold'>
                 Job Card
             </div>
-            <JobsCard></JobsCard>
+           
         </div>
     );
 };

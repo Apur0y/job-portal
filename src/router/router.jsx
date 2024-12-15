@@ -7,6 +7,7 @@ import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import AllJobs from "../pages/AllJobs/AllJobs";
 
   const router = createBrowserRouter([
     {
@@ -24,6 +25,10 @@ import Login from "../pages/Login/Login";
         {
           path:"login",
           element:<Login></Login>
+        },
+        {
+          path:'alljobs',
+          element:<AllJobs></AllJobs>
         }
       ]
     },
