@@ -28,7 +28,8 @@ import AllJobs from "../pages/AllJobs/AllJobs";
         },
         {
           path:'alljobs',
-          element:<AllJobs></AllJobs>
+          element:<AllJobs></AllJobs>,
+          loader: ()=> fetch("http://localhost:3000/alljobs")
         }
       ]
     },
