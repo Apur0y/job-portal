@@ -2,11 +2,14 @@ import React, { useContext } from 'react';
 import RegisterIcon from '../../assets/lottie/register.json'
 import Lottie from 'lottie-react';
 import AuthContext from '../../context/AuthContext';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
   const {signInUser} = useContext(AuthContext)
 
+  const navigate = useNavigate()
      const handleSubmit =(event)=>{
           event.preventDefault()
         const e = event.target;
@@ -21,6 +24,10 @@ const Login = () => {
 
         .then(res=>{
           console.log(res)
+          const user = {email:email}
+          axios.post('http://localhost:3000/jwt',user)
+          .then(data=> console.log(data))
+          navigate('/')
         })
         .catch((error)=>{
           console.log("ERROR: meessage", error.message)
